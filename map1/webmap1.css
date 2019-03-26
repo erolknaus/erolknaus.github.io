@@ -3,8 +3,8 @@
   </div>   
   #Louisiana { height: 180px }
   L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.)
-  let LSU = L.marker ([30.4133° N, 91.1800° W])
-  let BRCC = L.polygon([
-    [30.3241, 91.0944],
-    [30.3229, 91.0820],
-    [30.3107, 91.0850]
+let LSU = L.marker ([30.4133° N, 91.1800° W])
+let BRCC = L.polygon([
+  [30.3241, 91.0944],
+  [30.3229, 91.0820],
+  [30.3107, 91.0850]
