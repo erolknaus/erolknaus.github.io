@@ -4,9 +4,9 @@ L.tileLayer(basemapUrl).addTo(myMap)
 let stateDemographicsUrl = 'https://geog4046.github.io/portfolio/data/us_state_demographics_ESRI_2010A.geojson'
 jQuery.getJSON(stateDemographicsUrl, function (data) {
   let stateStyle = function (feature) {
-    let size = feature.properties.SQMI // get the current state's Average Size attribute
+    let size = feature.properties.SQMI // get the current state's Size attribute
     let stateColor = 'olive' // let the initial color be a darker green
-    if ( size < 581369.17 ) { stateColor = 'green' } // if the state's median size is less than the average, color it a lighter green
+    if ( size < 581369.17 ) { stateColor = 'green' } // if the state's size is less than the national average, color it a lighter green
     return {
       color: stateColor, //use the color variable above for the value
       weight: 1,
