@@ -16,7 +16,7 @@ jQuery.getJSON(stateDemographicsUrl, function (data) {
   let onEachFeature = function (feature, layer) {
      let name = feature.properties.STATE_NAME
      let age = feature.properties.MED_SIZE
-     layer.bindPopup('Median age of ' + name + ': ' + age + '<br>National average: 38')
+     layer.bindPopup('Median size of ' + name + ': ' + size + '<br>National average: 38')
    }
   let geojsonOptions = {
     style: stateStyle,
