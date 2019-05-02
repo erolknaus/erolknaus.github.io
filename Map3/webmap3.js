@@ -1,3 +1,4 @@
+console.log("in javascript file")
 let statemap = L.map('map3').setView([32.18, -99.14], 4)
 let basemapUrl = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png'
 L.tileLayer(basemapUrl).addTo(myMap)
