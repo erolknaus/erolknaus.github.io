@@ -23,5 +23,5 @@ jQuery.getJSON(stateDemographicsUrl, function (data) {
     style: stateStyle,
     onEachFeature: onEachFeature
   }
-  L.geoJSON(data, ).addTo(stateMap)
+  L.geoJSON(data, ).addTo(statemap)
 })
