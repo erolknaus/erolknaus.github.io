@@ -1,7 +1,7 @@
 console.log("in javascript file")
 let statemap = L.map('map3').setView([32.18, -99.14], 4)
 let basemapUrl = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png'
-L.tileLayer(basemapUrl).addTo(myMap)
+L.tileLayer(basemapUrl).addTo(statemap)
 let stateDemographicsUrl = 'https://geog4046.github.io/portfolio/data/us_state_demographics_ESRI_2010A.geojson'
 jQuery.getJSON(stateDemographicsUrl, function (data) {
   let stateStyle = function (feature) {
