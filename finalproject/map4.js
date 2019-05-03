@@ -12,7 +12,7 @@ jQuery.getJSON(floridaDemographicsUrl, function (data) {
      weight: 1,
      fillOpacity: 0.2
     }
-  }
+  })
   let onEachFeature = function (feature, layer) {
      let name = feature.properties.FDI
      let population = feature.properties.TotalPopul
