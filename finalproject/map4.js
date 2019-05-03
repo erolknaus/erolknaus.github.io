@@ -1,4 +1,4 @@
-let floridamap = L.map('finalproject').setView([28.342828, -83.912725], 2)
+let floridamap = L.map('finalproject').setView([28.342828, -83.912725], 8)
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png').addTo(floridamap)
 let floridaDemographicsUrl = 'https://opendata.arcgis.com/datasets/003e10bdf5054162b27c65db3ebc3d07_0.geojson'
 //jQuery.getJSON(floridaDemographicsUrl, function (data){
