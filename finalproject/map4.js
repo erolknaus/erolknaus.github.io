@@ -18,7 +18,7 @@ jQuery.getJSON(floridaDemographicsUrl, function (data) {
   let onEachFeature = function (feature, layer) {
      let name = feature.properties.FDI
      let population = feature.properties.TotalPopul
-     layer.bindPopup('TotalPopul' + 'FDI' + 'PcA_20_24')
+     layer.bindPopup('TotalPopul'+'FDI'+'PcA_20_24')
    }
   let CollegeTown1=L.polygon([
     [29.731288, -82.412799],
