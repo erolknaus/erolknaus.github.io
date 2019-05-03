@@ -1,6 +1,9 @@
 let floridamap = L.map('finalproject').setView([32.18, -99.14], 4)
-L.tilelayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png').addTo(floridamap)
+L.tilelayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png').addTo(floridamap)
 let floridaDemographicsUrl = 'https://opendata.arcgis.com/datasets/003e10bdf5054162b27c65db3ebc3d07_0.geojson'
+//jQuery.getJSON(floridaDemographicsUrl, function (data){
+//let floridamap= L.map('finalproject').setView([30.4515, -91.1871], 4)
+//L.tilelayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png').addTo(floridamap)
 jQuery.getJSON(floridaDemographicsUrl, function (data) {
   let zipStyle = function (feature) {
    let TotalPopul = feature.properties.TotalPopul // get the current zip's Population attribute
@@ -28,3 +31,4 @@ jQuery.getJSON(floridaDemographicsUrl, function (data) {
   }
   L.geoJSON(data, geojsonOptions).addTo(floridamap)
 })
+
