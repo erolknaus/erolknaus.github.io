@@ -20,10 +20,20 @@ jQuery.getJSON(floridaDemographicsUrl, function (data) {
      let population = feature.properties.TotalPopul
      layer.bindPopup('TotalPopul' + 'FDI' + 'PcA_20_24')
    }
-  let CollegeTowns=L.polygon([
+  let CollegeTown1=L.polygon([
     [29.731288, -82.412799],
     [29.737922, -82.266309],
     [29.570606, -82.392070]
+  ]).addTo(floridamap)
+  let CollegeTown2=L.polygon([
+    [30.496041, -84.381630],
+    [30.360903, -84.380558],
+    [30.478398, -84.222869]
+  ]).addTo(floridamap)
+  let HomesforSale=L.polygon([
+    [26.601911, -82.127762],
+    [26.669833, -81.620704],
+    [26.093442, -81.736284]
   ]).addTo(floridamap)
   let geojsonOptions = {
     style: zipStyle,
@@ -31,4 +41,3 @@ jQuery.getJSON(floridaDemographicsUrl, function (data) {
   }
   L.geoJSON(data, geojsonOptions).addTo(floridamap)
 })
-
