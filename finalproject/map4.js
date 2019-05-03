@@ -2,7 +2,7 @@ let floridamap = L.map('finalproject').setView([32.18, -99.14], 4)
 let basemapUrl = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png'
 L.tileLayer(basemapUrl).addTo(floridamap)
 let floridaDemographicsUrl = 'https://opendata.arcgis.com/datasets/003e10bdf5054162b27c65db3ebc3d07_0.geojson'
-jQuery.getJSON(floridaDemographicsUrl, function (data) 
+jQuery.getJSON(floridaDemographicsUrl, function (data) {
   let zipStyle = function (feature) {
    let TotalPopul = feature.properties.TotalPopul // get the current zip's Population attribute
    let zipColor = 'Red' // let the initial color be red
@@ -16,7 +16,7 @@ jQuery.getJSON(floridaDemographicsUrl, function (data)
   let onEachFeature = function (feature, layer) {
      let name = feature.properties.FDI
      let population = feature.properties.TotalPopul
-     layer.bindPopup('Average population of ' + name + ': ' + population + '<br>State average: 20000')
+     layer.bindPopup('TotalPopul' + 'FDI' + 'PcA_20_24')
    }
   let geojsonOptions = {
     style: zipStyle,
