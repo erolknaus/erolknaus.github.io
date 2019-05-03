@@ -22,5 +22,5 @@ jQuery.getJSON(floridaDemographicsUrl, function (data) {
     style: zipStyle,
     onEachFeature: onEachFeature
   }
-  L.geoJSON(data, ).addTo(floridamap)
+  L.geoJSON(data, geojsonOptions).addTo(floridamap)
 })
