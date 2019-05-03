@@ -17,6 +17,11 @@ jQuery.getJSON(floridaDemographicsUrl, function (data) {
      let population = feature.properties.TotalPopul
      layer.bindPopup('TotalPopul' + 'FDI' + 'PcA_20_24')
    }
+  let CollegeTowns=L.polygon([
+    [29.731288, -82.412799],
+    [29.737922, -82.266309],
+    [29.570606, -82.392070]
+  ]).addTo(floridamap)
   let geojsonOptions = {
     style: zipStyle,
     onEachFeature: onEachFeature
