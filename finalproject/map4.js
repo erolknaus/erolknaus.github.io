@@ -8,7 +8,7 @@ jQuery.getJSON(floridaDemographicsUrl, function (data) {
   let zipStyle = function (feature) {
    let TotalPopul = feature.properties.TotalPopul // get the current zip's Population attribute
    let zipColor = 'Red' // let the initial color be red
-   if ( TotalPopul < 20000 ) { stateColor = 'green' } // if the zip code's population is less than 20,000, color it green
+   if ( TotalPopul < 2000 ) { stateColor = 'green' } // if the zip code's population is less than 20,000, color it green
    return {
      color: zipColor, //use the color variable above for the value
      weight: 1,
