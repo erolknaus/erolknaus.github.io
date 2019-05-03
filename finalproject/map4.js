@@ -15,8 +15,8 @@ jQuery.getJSON(floridaDemographicsUrl, function (data) {
   }
   let onEachFeature = function (feature, layer) {
      let name = feature.properties.FDI
-     let size = feature.properties.SQMI
-     layer.bindPopup('Average size of ' + name + ': ' + size + '<br>National average: ')
+     let population = feature.properties.TotalPopul
+     layer.bindPopup('Average population of ' + name + ': ' + population + '<br>State average: 20000')
    }
   let geojsonOptions = {
     style: zipStyle,
