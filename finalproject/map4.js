@@ -1,4 +1,4 @@
-let floridamap = L.map('finalproject').setView([28.342828, -83.912725], 4)
+let floridamap = L.map('finalproject').setView([28.342828, -83.912725], 2)
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png').addTo(floridamap)
 let floridaDemographicsUrl = 'https://opendata.arcgis.com/datasets/003e10bdf5054162b27c65db3ebc3d07_0.geojson'
 //jQuery.getJSON(floridaDemographicsUrl, function (data){
@@ -8,7 +8,7 @@ jQuery.getJSON(floridaDemographicsUrl, function (data) {
   let zipStyle = function (feature) {
    let TotalPopul = feature.properties.TotalPopul // get the current zip's Population attribute
    let zipColor = 'Red' // let the initial color be red
-   if ( TotalPopul < 2000 ) { stateColor = 'green' } // if the zip code's population is less than 2000, color it green
+   if (TotalPopul < 2000) {stateColor = 'green'} // if the zip code's population is less than 2000, color it green
    return {
      color: zipColor, //use the color variable above for the value
      weight: 1,
